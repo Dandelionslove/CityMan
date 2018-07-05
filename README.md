@@ -1,2 +1,2 @@
 # CityMan
-Include scenes and scripts
+Include game scripts
