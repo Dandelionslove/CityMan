@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class TimerCountDown : MonoBehaviour
 {
@@ -35,9 +35,9 @@ public class TimerCountDown : MonoBehaviour
             //print(string.Format("{0:D2}:{1:D2}:{2:D2}.{3:D3}", hour, minute, second, millisecond));
             time--;
         }
-//		if (time <= 0) {           //此失败画面受DetectCollision控制
-//			LoadFailureScene ();
-//		}
+		if (time <= 0) {           //此失败画面受DetectCollision控制
+			LoadFailureScene ();
+		}
     }
 
     // Update is called once per frame
@@ -46,7 +46,8 @@ public class TimerCountDown : MonoBehaviour
         
     }
 
-//	void LoadFailureScene()
-//	{
-//	}
+	void LoadFailureScene()
+	{
+		SceneManager.LoadScene (3);
+	}
 }

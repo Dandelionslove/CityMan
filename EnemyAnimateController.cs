@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyAnimateController : MonoBehaviour {
 
@@ -24,12 +25,33 @@ public class EnemyAnimateController : MonoBehaviour {
 			e_animation = enemy.GetComponent<Animation> ();
 			e_animation.CrossFade ("attack01", 0.25f);
 			DetectCollision.isMeetCrawlingBug = false;
+//			if (!DetectCollision.isMeetCrawlingBug) {
+//				enemy = GameObject.Find ("Enemies/CrawlingBug");
+//				e_animation = enemy.GetComponent<Animation> ();
+//				e_animation.CrossFade ("run", 0.25f);
+//			}
+			SceneManager.LoadScene(3);
 		} else if(DetectCollision.isMeetMaskedOrc){
 			enemy = GameObject.Find ("Enemies/MaskedOrc");
 			e_animation = enemy.GetComponent<Animation> ();
 			e_animation.CrossFade ("attack01", 0.25f);
 			DetectCollision.isMeetMaskedOrc = false;
+//			if (!DetectCollision.isMeetMaskedOrc) {
+//				enemy = GameObject.Find ("Enemies/MaskedOrc");
+//				e_animation = enemy.GetComponent<Animation> ();
+//				e_animation.CrossFade ("run", 0.25f);
+//			}
+			SceneManager.LoadScene(3);
 		}
-
+//		if (!DetectCollision.isMeetCrawlingBug) {
+//			enemy = GameObject.Find ("Enemies/CrawlingBug");
+//			e_animation = enemy.GetComponent<Animation> ();
+//			e_animation.CrossFade ("run", 0.25f);
+//		}
+//		if (!DetectCollision.isMeetMaskedOrc) {
+//			enemy = GameObject.Find ("Enemies/MaskedOrc");
+//			e_animation = enemy.GetComponent<Animation> ();
+//			e_animation.CrossFade ("run", 0.25f);
+//		}
 	}
 }

@@ -35,9 +35,9 @@ public class EnemyMovement : MonoBehaviour
 	void Update ()
 	{
 		if (canMoving) {
-			Debug.Log ("remD"+nav.remainingDistance);
+//			Debug.Log ("remD"+nav.remainingDistance);
 			nav.SetDestination (currentDestination);
-			Debug.Log("curD"+currentDestination);
+//			Debug.Log("curD"+currentDestination);
 
 			if (nav.remainingDistance < 0.05f) {       //到达目的地后暂停3s，然后切换目的地，达到来回走动的效果
 

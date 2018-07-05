@@ -9,22 +9,28 @@ public class GameState : MonoBehaviour
     public int exit_label=1; 
     public GameObject exit;
     public string state_game="on";
+	public static Vector3 exitPosition;
 
     void SetExit(){
-        exit_label = (int)Random.Range(1, 3);
-        for(int i=1;i<=3;i++){
-            GameObject temp=GameObject.Find("Exit" + exit_label.ToString());
-			Debug.Log (i);
-            if(i==exit_label){
-                exit=temp;
-                exit.active=false;
-//				temp.active=true;
-            }
-            else{
-//                temp.active=true;
-            }
-        }
-        print("exit_label:"+exit_label);
+//        exit_label = (int)Random.Range(1, 3);
+//		Debug.Log (exit_label);
+//        for(int i=1;i<=3;i++){
+//			GameObject temp=GameObject.Find("Exit" + exit_label.ToString());
+////			Debug.Log (i);
+//            if(i==exit_label){
+//                exit=temp;
+//				Debug.Log (exit);
+////                exit.active=false;
+////				temp.active=true;
+//				exit.gameObject.SetActive(true);
+//				Debug.Log (exit.gameObject);
+//            }
+//            else{
+////                temp.active=false;
+//				temp.gameObject.SetActive(false);
+//            }
+//        }
+//        print("exit_label:"+exit_label);
     }
 
     void ChangeState(){
@@ -42,7 +48,10 @@ public class GameState : MonoBehaviour
     }
 
     void Start () {
-        SetExit();
+//        SetExit();
+//		GameObject exit=GameObject.Find("exit");
+//		Debug.Log (exit.GetInstanceID ());
+//		Debug.Log(exit);
     }
     // Update is called once per frame
     void Update()

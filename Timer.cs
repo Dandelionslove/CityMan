@@ -49,7 +49,7 @@ public class Timer{
 	}
 
 	//计时器结束
-	void End()
+	public void End()
 	{
 		IsStart = false;
 		FinishCount++;

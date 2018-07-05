@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class BeanController : MonoBehaviour
@@ -92,8 +93,6 @@ public class BeanController : MonoBehaviour
 //		Destroy (risk.gameObject);
 //		Destroy (bonus);
     }
-
-
   
     void Start () 
     {
